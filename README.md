@@ -1,10 +1,10 @@
 # Hello World Python Project
 
-This is a simple Python script that greets the user with a personalized message.
+This is a simple Python script 
 
 ## Overview
 
-The script prompts the user to input their name and then displays a greeting message with the name entered.
+The script prints the message 
 
 ## Requirements
 
