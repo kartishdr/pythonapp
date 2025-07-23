@@ -1,19 +1,17 @@
-# Use full Python base image to avoid threading errors
+# Use the official Python 3.11 image
 FROM python:3.11
 
-# Set working directory
+# Set working directory inside the container
 WORKDIR /app
 
-# Copy your app
+# Copy application file into the container
 COPY hello.py .
 
-# Install Flask without rich progress bar to avoid threading issues
-RUN PIP_NO_PROGRESS_BAR=off pip install Flask
+# Install Flask with pip using reduced resource usage
+RUN pip install --no-cache-dir --progress-bar off Flask
 
-# Expose Flask port
-EXPOSE 8082
-
-# Run the app
+# Set the default command to run the Flask app
 CMD ["python", "hello.py"]
+
 
 
