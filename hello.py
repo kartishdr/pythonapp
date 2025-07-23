@@ -1,9 +1,11 @@
-# hello.py
+from flask import Flask, request
 
-def greet(name):
-    """Function to greet the user."""
-    print(f"Hello, {name}! Welcome to Python.")
+app = Flask(__name__)
+
+@app.route("/")
+def greet():
+    name = request.args.get("name", "Guest")
+    return f"Hello, {name}!"
 
 if __name__ == "__main__":
-    name = input("Enter your name: ")
-    greet(name)
+    app.run()
