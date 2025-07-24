@@ -62,5 +62,5 @@ jobs:
           docker run -d --name flask-app -p 8082:8082 \
             ${{ steps.login-ecr.outputs.registry }}/${{ secrets.ECR_REPOSITORY }}:latest
 
-          echo "Deployment complete. Visit http://<your-ec2-ip>:8082"
+          echo "Deployment complete. Visit http://3.89.62.229:8082"
 
